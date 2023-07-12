@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -13,6 +14,7 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
+	fmt.Println("falg is 1")
 	isDone := Prepare()
 	if isDone {
 		os.Exit(0)
