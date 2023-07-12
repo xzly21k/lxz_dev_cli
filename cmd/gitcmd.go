@@ -62,8 +62,8 @@ func UpdateLatestVersion() (isDone bool) {
 		log.Printf("[获取最新版本失败]:" + err.Error())
 		return
 	}
-	if "v"+constants.Version != latestVersion {
-		log.Printf((fmt.Sprintf("[目前的版本]version:%s", "v"+constants.Version)))
+	if constants.Version != latestVersion {
+		log.Printf((fmt.Sprintf("[目前的版本]version:%s", constants.Version)))
 		log.Println(fmt.Sprintf("[发现新版本]version:%s", latestVersion))
 		if ok, _ := ask.ConfirmYes("是否需要更新版本"); !ok {
 			return
